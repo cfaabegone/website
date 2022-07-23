@@ -18,11 +18,9 @@ commands one by one:
 
 ```bash
 # Change this command to choose a distro manually.
-targetdistro=$(if echo " bullseye focal impish jammy uma una " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
+distro=$(if echo " bullseye focal impish jammy uma una " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
-! [ -d /etc/apt/keyrings ] && sudo mkdir -p /etc/apt/keyrings && sudo chmod 755 /etc/apt/keyrings
-
-wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/librewolf.gpg
+wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
 
 sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
 Types: deb
@@ -30,7 +28,7 @@ URIs: https://deb.librewolf.net
 Suites: $targetdistro
 Components: main
 Architectures: amd64
-Signed-By: /etc/apt/keyrings/librewolf.gpg
+Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
 
 sudo apt update
