@@ -32,7 +32,7 @@ Please **don't**.
 
 Tor Browser is specifically designed to reduce fingerprintability. Using
 LibreWolf or any other browser would make you stand out. From a personal
-security perspective it's also a good idea to have a seperate browser for .onion
+security perspective it's also a good idea to have a separate browser for .onion
 sites and general Tor browsing.
 
 ### Why do you disable Google Safe Browsing?
