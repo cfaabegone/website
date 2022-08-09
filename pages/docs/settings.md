@@ -105,16 +105,6 @@ This change might cause breakage: in that case you can revert to the default
 value and rely on the built-in referer trimming, or alternatively you can use
 [Smart Referer](/docs/addons/#privacy-addons).
 
-### Enable IPv6
-
-Before enabling IPv6 make sure you are using **IPv6 privacy extension** at the
-OS level: while macOS and Windows users are already covered, some Linux distros
-do not enable it by default.
-
-```js
-defaultPref("network.dns.disableIPv6", false);
-```
-
 ### Enable WebGL
 
 ```js

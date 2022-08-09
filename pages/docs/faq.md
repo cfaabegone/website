@@ -1,8 +1,8 @@
 # Frequently Asked Questions
 
-This FAQ documents version 6.4 of the settings. Please always upgrade to the
-latest version of the browser. If your question is not answered here, you can
-try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
+This FAQ documents version 6.8 of the settings. Make sure to always upgrade to
+the latest version of the browser. If your question is not answered here, you
+can try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
 [Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
 [r/LibreWolf](https://www.reddit.com/r/LibreWolf/) and
 [c/LibreWolf](https://lemmy.ml/c/librewolf).
@@ -30,10 +30,9 @@ them.
 
 Please **don't**.
 
-Tor Browser is specifically designed to reduce fingerprintability. Using
-LibreWolf or any other browser would make you stand out. From a personal
-security perspective it's also a good idea to have a separate browser for .onion
-sites and general Tor browsing.
+The Tor Browser is specifically designed to reduce fingerprintability and to
+work on Tor. Using LibreWolf or any other browser would make you stand out and
+it is not recommended.
 
 ### Why do you disable Google Safe Browsing?
 
@@ -115,22 +114,22 @@ With that being said, LibreWolf is still commited to removing all privacy
 invading connections, and to keep all connections to the bare minimum required
 to maximize and balance privacy and security.
 
-### What is Mozilla Tracking Protection?
+### What is Enhanced Tracking Protection?
 
-In LibreWolf we decided to enable Tracking Protection, as it plays nicely with
-uBO and it can block some extra scripts. Additionally, when set to strict it
-includes dFPI, SmartBlock, enhanced cookie cleaning and stricter referrer
-policies. For this reason, we always suggest the default **strict** mode, and
-when using it please
+In LibreWolf we decided to enable Enhanced Tracking Protection, as it plays
+nicely with uBO and it can block some extra scripts. Additionally, when set to
+strict it includes dFPI, SmartBlock, enhanced cookie cleaning, stricter referrer
+policies and URL query stripping. For this reason, we always suggest the default
+**strict** mode, and when using it please
 [do not enable FPI](/docs/faq#why-isnt-first-party-isolate-enabled-by-default),
 as it interferes with the more recent dFPI.
 
 Finally, there's no point in changing from strict to any other mode, as strict
 mode doesn't usually cause any kind of breakage, and changing to custom mode to
-block cookies will come at the expense of disabling dFPI: not worth it, so we
-decided to hide the UI that allows users to change this. You can explicitly
-force other modes with overrides, but once again we advise against it. More
-details are available
+block cookies will come at the expense of disabling partitioning: not worth it,
+so we decided to hide the UI that allows users to change this setting.
+[You can instead whitelist specific websites from the urlbar](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_what-to-do-if-a-site-seems-broken).
+More details are available
 [at this link](https://gitlab.com/librewolf-community/settings/-/issues/149#note_873599441).
 
 Tracking Protection requires some occasional outgoing connections, in order to
@@ -169,6 +168,17 @@ default cleaning mechanism of LibreWolf. Instead it introduces many regressions,
 as it doesn't respect cookie exceptions and installed addons, while also being
 fingerprintable.
 
+### Can LibreWolf protect my public IP address?
+
+No. If you care about protecting your IP address, you should use a VPN or even
+better use the Tor Browser.
+
+### How do I disable IPv6?
+
+Instead of disabling IPv6 in the browser, we recommend enabling the **IPv6
+privacy extension** at the OS level. macOS and Windows users are already
+covered, but some Linux distros do not enable it by default.
+
 ## Usability
 
 ### What are the most common downsides of RFP (Resist Fingerprinting)?
@@ -181,7 +191,6 @@ Other common problems brought by RFP include:
 
 - spoofed **timezone**.
 - forced light **theme**.
-- fixed **user agent**.
 - smaller and fixed **window size** on startup.
 - suppressed keyboard modifier events using **alt-keys**.
 

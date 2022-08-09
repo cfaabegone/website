@@ -30,9 +30,6 @@ our [Gitter](https://gitter.im/librewolf-community) /
   candidates generation to the default interface when sharing video or audio
   during a videoconference.
 - Force DNS and WebRTC inside the proxy, when one is being used.
-- Disable IPv6, as not all Linux distros ship with the
-  [Privacy Extension](https://datatracker.ietf.org/doc/html/rfc3041#section-2.3)
-  enabled by default.
 - Trim cross-origin referrers, so that they don't include the full URI.
 - Disable search and form history.
 - Disable form autofill.
