@@ -472,18 +472,18 @@ as you would for every other cask.
 LibreWolf is available as a cask, so you can install entering
 `brew install --cask librewolf`.
 
-### Does LibreWolf work on M1 machines?
+### Does LibreWolf work on Apple Silicon machines?
 
 Yes, we provide native builds for both Intel and ARM based machines. If you own
-a M1 powered MacBook the relative builds are refered to as `aarch64`, they are
-cross-compiled and we did not test them before release. Please consider that the
-build time on M1 is relatively low, so building from source is probably worth it
-in any case.
+an Apple Silicon powered MacBook the relative builds are refered to as
+`aarch64`, they are cross-compiled and we did not test them before release.
+Please consider that the build time on Apple Silicon is relatively low, so
+building from source is probably worth it in any case.
 
 ### Why is LibreWolf marked as broken?
 
-It is possible that M1 users see their recently downloaded LibreWolf flagged as
-broken or unsafe by the OS.
+It is possible that Apple Silicon users see their recently downloaded LibreWolf
+flagged as broken or unsafe by the OS.
 
 This happens because we do not notarize the macOS version of the browser: we
 don't have a paid Apple Developer license and we don't want to support this
