@@ -23,7 +23,7 @@ export default function Banner() {
         <img src="/icon.svg" alt="Logo" />
         <h1>LibreWolf</h1>
         <h4 className="text-gray">
-          A fork of Firefox, focused on privacy, security and freedom.
+          A custom version of Firefox, focused on privacy, security and freedom.
         </h4>
         <div className="buttons">
           <Button big href="https://gitlab.com/librewolf-community">

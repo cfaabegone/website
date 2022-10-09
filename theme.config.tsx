@@ -97,7 +97,7 @@ const themeConfig = {
       {/* HTML Meta Tags */}
       <meta
         name="description"
-        content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
+        content="A custom version of Firefox, focused on privacy, security and freedom."
       />
 
       {/* Facebook Meta Tags */}
@@ -106,7 +106,7 @@ const themeConfig = {
       <meta property="og:title" content="LibreWolf Browser" />
       <meta
         property="og:description"
-        content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
+        content="A custom version of Firefox, focused on privacy, security and freedom."
       />
       <meta property="og:image" content="https://librewolf.net/og_image.png" />
 
@@ -117,7 +117,7 @@ const themeConfig = {
       <meta name="twitter:title" content="LibreWolf Browser" />
       <meta
         name="twitter:description"
-        content="An independent fork of Firefox, with the primary goals of privacy, security and user freedom."
+        content="A custom version of Firefox, focused on privacy, security and freedom."
       />
       <meta name="twitter:image" content="https://librewolf.net/og_image.png" />
     </>
