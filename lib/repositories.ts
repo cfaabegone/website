@@ -68,6 +68,7 @@ const repositories: {
   },
   {
     name: "OpenBSD",
+    subtitle: "(deprecated)",
     slug: "openbsd",
     logo: "/icons/openbsd.png"
   }
