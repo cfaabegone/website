@@ -18,7 +18,7 @@ commands one by one:
 
 ```bash
 # Change this command to choose a distro manually.
-distro=$(if echo " bullseye focal impish jammy uma una " | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
+distro=$(if echo " bullseye focal impish jammy uma una vanessa" | grep -q " $(lsb_release -sc) "; then echo $(lsb_release -sc); else echo focal; fi)
 
 wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
 
@@ -37,7 +37,7 @@ sudo apt install librewolf -y
 ```
 
 <Callout emoji="">
-**Attention.** We only build LibreWolf for Debian 11, Ubuntu 20/21/22 and Mint 20.2/20.3. If you don't use one of those distros, the above commands will install the Ubuntu 20 build for you which may or may not work. If you want to manually choose a different distro's build, then change the first of the above commands to point at that distro. E.g. to install the Debian 11 build, run `targetdistro=bullseye`.
+**Attention.** We only build LibreWolf for Debian 11, Ubuntu 20/21/22 and Mint 20.2/20.3/21. If you don't use one of those distros, the above commands will install the Ubuntu 20 build for you which may or may not work. If you want to manually choose a different distro's build, then change the first of the above commands to point at that distro. E.g. to install the Debian 11 build, run `targetdistro=bullseye`.
 
 Also note that we only build for the `amd64` (a.k.a. `x86_64`) architecture. To
 determine your architecture, run the `uname -m` command. Most desktop and laptop
