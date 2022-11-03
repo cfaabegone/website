@@ -32,7 +32,8 @@ Please **don't**.
 
 The Tor network is designed to give you complete anonymity, but it can be
 compromised if you use it with any browser other than the Tor Browser. If you
-want anonymity, [download the Tor Browser](https://www.torproject.org/download/).
+want anonymity,
+[download the Tor Browser](https://www.torproject.org/download/).
 
 The Tor Browser is specifically designed to reduce fingerprintability and to
 work on Tor. Using LibreWolf or any other browser would make you stand out and
