@@ -136,11 +136,6 @@ const themeConfig = {
       title: "Docs",
       route: "/docs",
       href: "/docs/faq"
-    },
-    {
-      title: "Community Art",
-      route: "/community-art",
-      href: "/community-art"
     }
   ]
 };
