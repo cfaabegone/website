@@ -11,7 +11,7 @@ import {
 } from "components/gitlabDownloadButton";
 
 export const getStaticProps = getStaticDownloadButtonProps([
-  getGitlabDownloadProp("24386000", "x86_64.AppImage")
+  getGitlabDownloadProp("appimageDownload", "24386000", "x86_64.AppImage")
 ]);
 
 <InstallationHeader />
@@ -20,7 +20,7 @@ To install LibreWolf on any other Linux Distribution, you have three options
 
 ## AppImage
 
-<GitlabDownloadButton projectId="24386000" />
+<GitlabDownloadButton id="appimageDownload" />
 
 ### Installing
 

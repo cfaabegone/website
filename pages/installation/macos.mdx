@@ -11,7 +11,7 @@ import {
 } from "components/gitlabDownloadButton";
 
 export const getStaticProps = getStaticDownloadButtonProps([
-  getGitlabDownloadProp("13853965", "x86_64.dmg")
+  getGitlabDownloadProp("macosDownload", "13853965", "x86_64.dmg")
 ]);
 
 <InstallationHeader />
@@ -33,7 +33,7 @@ flagged as broken. More details are available in our
 You can also install LibreWolf via a `.dmg`, but please note that this method
 requires to apply updates manually.
 
-<GitlabDownloadButton projectId="13853965" />
+<GitlabDownloadButton id="macosDownload" />
 
 ## Compiling from source
 

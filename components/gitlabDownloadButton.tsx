@@ -2,12 +2,13 @@ import { useSSG } from "nextra/ssg";
 import { Download, DownloadButton, DownloadPromise } from "./downloadButton";
 
 export function getGitlabDownloadProp(
+  id: string,
   projectId: string,
   endsWith: string,
   doesntEndWith?: string
 ): DownloadPromise {
   return {
-    id: projectId,
+    id,
     getDownload: () =>
       fetch(`https://gitlab.com/api/v4/projects/${projectId}/releases`)
         .then((res) => res.json())
@@ -22,7 +23,7 @@ export function getGitlabDownloadProp(
               `Can't find any release asset for GitLab project ${projectId} with filter *${endsWith}`
             );
           const download: Download = {
-            id: projectId,
+            id,
             name: asset.name,
             url: asset.url,
             otherDownloadsUrl: res[0]._links.self.replace(/\/[^\/]*$/, ""),
@@ -47,14 +48,15 @@ export function getGitlabDownloadProp(
   };
 }
 
-export function GitlabDownloadButton({ projectId }: { projectId: string }) {
+export function GitlabDownloadButton({ id }: { id: string }) {
   const { initialDownloads } = useSSG();
-  const download: Download = initialDownloads[projectId];
+  const download: Download = initialDownloads[id];
 
   return (
     <DownloadButton
       downloadPromise={getGitlabDownloadProp(
-        projectId,
+        id,
+        download.data.projectId,
         download.data.endsWith,
         download.data.doesntEndWith
       )}
