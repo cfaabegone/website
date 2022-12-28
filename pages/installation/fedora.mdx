@@ -12,12 +12,13 @@ can add it to your system and install LibreWolf by running the following
 commands one by one:
 
 ```bash
-sudo rpm --import https://keys.openpgp.org/vks/v1/by-fingerprint/034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3
+sudo dnf config-manager --add-repo https://rpm.librewolf.net/librewolf-repo.repo
 
-sudo dnf config-manager --add-repo https://rpm.librewolf.net
-
-sudo dnf install --refresh librewolf
+sudo dnf install librewolf
 ```
+
+You should accept any prompts wanting to import the GPG key with the fingerprint
+`034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3`.
 
 ## COPR (unofficial)
 
