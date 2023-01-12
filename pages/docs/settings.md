@@ -39,6 +39,12 @@ On Windows, in your profile directory:
 %USERPROFILE%\.librewolf\librewolf.overrides.cfg
 ```
 
+On Windows when using the portable launcher `LibreWolf-Portable.exe`:
+
+```
+Profiles\Default\librewolf.overrides.cfg
+```
+
 ## Common `.cfg` Recipes
 
 Simply add these lines to your `librewolf.overrides.cfg` file. The order is not
