@@ -121,18 +121,6 @@ If you enable WebGL, please consider using an extension like
 [CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/)
 to retain at least a minimum amount of fingerprinting protection.
 
-### Disable `media.peerconnection.ice.no_host`
-
-This setting was originally intended to protect your private IP address, but it
-became redundant and can be safely disabled unless you're on Windows 7 or 8. You
-may need to disable it to get some
-[video conferencing](/docs/faq/#what-should-i-do-if-video-conferencing-is-not-working)
-websites to work.
-
-```js
-defaultPref("media.peerconnection.ice.no_host", false);
-```
-
 ### Enable Firefox Sync
 
 For a more in-depth look into Firefox Sync,

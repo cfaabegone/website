@@ -228,11 +228,9 @@ that the website needs canvas access to display them properly. Check out
 
 ### What should I do if video conferencing is not working?
 
-Videoconferencing platforms may require one or more of the following features:
-
-- [`media.peerconnection.ice.no_host` disabled](/docs/settings/#disable-mediapeerconnectioniceno_host).
-- [WebGL enabled](/docs/settings/#enable-webgl).
-- [Autoplay allowed](#how-do-i-allow-autoplay-of-media).
+Videoconferencing platforms may require to
+[enable WebGL](/docs/settings/#enable-webgl) and to
+[allow autoplay](#how-do-i-allow-autoplay-of-media).
 
 ### Why is Session Restore not working?
 
