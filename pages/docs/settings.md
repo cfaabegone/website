@@ -172,10 +172,10 @@ defaultPref("general.autoScroll", true);
 
 If you don't like
 [the default autoplay policy](/docs/faq/#how-do-i-fully-prevent-autoplay) you
-can use a stricter one:
+can add a stricter one:
 
 ```js
-defaultPref("media.autoplay.default", 2);
+defaultPref("media.autoplay.blocking_policy", 2);
 ```
 
 ### Disable RFP (Resist Fingerprinting)
