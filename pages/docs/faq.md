@@ -184,6 +184,19 @@ Instead of disabling IPv6 in the browser, we recommend enabling the **IPv6
 privacy extension** at the OS level. macOS and Windows users are already
 covered, but some Linux distros do not enable it by default.
 
+### Does the bookmarks toolbar impact RFP's window size protection?
+
+If you set its visibility to "Only show on New Tab", the bookmarks toolbar can
+alter inner window size slightly deviating from the rounded value: while you
+should not stress over this, we generally recommend to set the visibility to
+"Always Show" or "Never Show".
+
+### Should I disable accessibility services?
+
+While we don't disable accessibility services by default, you might want to
+consider disabling them if you don't need them. You can read more about it
+[at this link](https://support.mozilla.org/en-US/kb/accessibility-services#w_should-i-disable-firefox-accessibility-service)
+
 ## Usability
 
 ### What are the most common downsides of RFP (Resist Fingerprinting)?
@@ -278,6 +291,17 @@ for an alternative source of search engine plugins.
 
 Autoplay can be controlled on a per-site basis from your urlbar.
 
+### How do I fully prevent autoplay?
+
+The default autoplay strategy used in LibreWolf is called _sticky_ and it's
+similar to the one found in other modern browsers. To avoid breakage it is not
+as strict as a full fledged user-triggered autoplay and it allows videos and
+thumbnails to play
+[in some cases](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation).
+
+If you prefer a stricter autoplay policy you should have a look at
+[this override recipe](/docs/settings/#use-a-stricter-autoplay-policy).
+
 ### How do I enable push notifications?
 
 Push notifications require to set a per-site exception,
@@ -297,6 +321,12 @@ when a website is trying to use DRM.
 
 Yes, you can normally apply language packs from the settings. To protect your
 privacy, LibreWolf will make you appear to websites as a `en-US` user.
+
+### Can I also change the language of the web content?
+
+Yes, but you will need overrides since we enforce `en-US`.
+[This comment](https://gitlab.com/librewolf-community/browser/linux/-/issues/314#note_1036216807)
+offers some guidance, using German as an example.
 
 ### Can I set a default download directory?
 
@@ -346,6 +376,15 @@ If you're experiencing this error:
 
 If instead a server is actually down, you can consider disabling hard-fail mode
 in the [LibreWolf settings](about:preferences#librewolf), or using overrides.
+
+### I'm getting "MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE". What can I do?
+
+We enable strict Public Key Pinning, so user level MiTM is not supported by
+default: this is problematic when an antivirus is trying to monitor your network
+traffic by using its own certificates.
+
+If you use this kind of antivirus software and you want to disable this, you
+need to change `security.cert_pinning.enforcement_level` to 1 in about:config.
 
 ## Linux specific questions:
 
@@ -448,6 +487,13 @@ You can try to fix it by running
 sudo apt install ca-certificates
 ```
 
+### I installed LibreWolf and KeePassXC using Flatpak and it does not work
+
+As you may have noticed when installing both LibreWolf and KeePassXC via
+Flatpak, they do not work together out of the box. We suggest reading
+[this guide](https://gitlab.com/TomaszDrozdz/librewolf-firefox-keepassxc-flatpak)
+to fix this issue!
+
 ## macOS specific questions:
 
 ### How do I install LibreWolf on macOS?
@@ -526,10 +572,15 @@ LibreWolf are free to move on to other projects whenever they want.
 
 Before opening a new issue we require that you read the FAQ in full and that you
 check out the [settings page](/docs/settings). We also ask you to look for
-existing issues that address your problem, before opening redundant ones. When
-opening a new issue make sure you follow the template if it exists, and after
-you did we ask you to contribute to it, by providing the needed details. When
-these simple rules are not respected, issues might be **closed** by maintainers.
+existing issues that address your problem, before opening redundant ones.
+Finally, we also appreciate when users try to reproduce their issues in a new
+profile to make sure their extensions and settings are not the root cause of the
+issue.
+
+When opening a new issue make sure you follow the template if it exists, and
+after you did we ask you to contribute to it, by providing the needed details.
+When these simple rules are not respected, issues might be **closed** by
+maintainers.
 
 Suggestions, improvements and contributions to LibreWolf are appreciated in the
 form of merge requests, or alternatively well documented issues. We suggest
@@ -556,3 +607,20 @@ a new issue, follow these rules:
 
 At the moment nobody is working on it, and it is not something we have
 considered investing time in.
+
+### Will you change the default search engine?
+
+We are going to keep DuckDuckGo since we believe it is a competent and privacy
+respecting search engine.
+
+Users that have ethical problems with DDG can always change their default search
+engine with one click.
+
+### In my country I can't download uBO from Mozilla's store. What can I do?
+
+If you can, we recommend downloading from the
+[GitHub releases page](https://github.com/gorhill/uBlock/releases). In any case,
+do NOT download extensions from random websites.
+
+More details are available at
+[this link](https://github.com/uBlockOrigin/uBlock-issues/issues/2088).

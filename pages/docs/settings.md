@@ -168,6 +168,16 @@ defaultPref("middlemouse.paste", false);
 defaultPref("general.autoScroll", true);
 ```
 
+### Use a stricter autoplay policy
+
+If you don't like
+[the default autoplay policy](/docs/faq/#how-do-i-fully-prevent-autoplay) you
+can use a stricter one:
+
+```js
+defaultPref("media.autoplay.default", 2);
+```
+
 ### Disable RFP (Resist Fingerprinting)
 
 **Careful**: RFP goes a long way towards protecting your privacy and we strongly
