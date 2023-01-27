@@ -8,7 +8,3 @@ We can't always assure that no data is sent from the browser to Mozilla or other
 third parties, but we try our best to achieve that. For that case, also check
 out the
 [Firefox Privacy Notice](https://www.mozilla.org/en-US/privacy/firefox/).
-
-If you are using the LibreWolf Software Repository (`deb.librewolf.net` and
-`rpm.librewolf.net`), also take a look at
-https://deb.librewolf.net/privacy.html.
