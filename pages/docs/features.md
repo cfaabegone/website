@@ -26,15 +26,13 @@ our [Gitter](https://gitter.im/librewolf-community) /
 - Disable WebGL, as it is a strong fingerprinting vector.
 - Prevent access to the location services of the OS, and use Mozilla's location
   API instead of Google's API.
-- Protect the private IP address of the user when WebRTC is used. Limit ICE
-  candidates generation to the default interface when sharing video or audio
-  during a videoconference.
+- Limit ICE candidates generation to a single interface when sharing video or
+  audio during a videoconference.
 - Force DNS and WebRTC inside the proxy, when one is being used.
 - Trim cross-origin referrers, so that they don't include the full URI.
 - Disable search and form history.
 - Disable form autofill.
 - Disable link prefetching and speculative connections.
-- Isolate service workers.
 - Disable disk cache and clear temporary files on close.
 - Use [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list) as the
   default certificate revocation mechanism, as it is faster and privacy
@@ -48,7 +46,6 @@ our [Gitter](https://gitter.im/librewolf-community) /
   security patches.
 - Enable HTTPS-only mode.
 - Enable stricter negotiation rules for TLS/SSL.
-- Disable SHA-1 certificates.
 - Always force user interaction when deciding the download location of a file.
 - Disable scripting in the built in pdf reader.
 - Protect against
@@ -59,7 +56,7 @@ our [Gitter](https://gitter.im/librewolf-community) /
 
 ## Annoyances
 
-- Block pop-up windows and prevent window resizing from scripts.
+- Prevent window resizing from scripts.
 - Disable autoplay of media.
 - Disable search suggestions and ads in the urlbar.
 - Remove all the distracting and sponsored content from the home page.
