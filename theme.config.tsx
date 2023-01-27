@@ -11,6 +11,27 @@ const themeConfig = {
           <Gitlab color="currentColor" size="1.4em" />
         </a>
       </Link>
+      <Link href="https://codeberg.org/librewolf" passHref>
+        <a className="text-current p-2 cursor-pointer" aria-label="Codeberg">
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 4.233 4.233"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+          >
+            <path
+              opacity={0.5}
+              d="M42519.285-7078.79a.76.568 0 0 0-.738.675l33.586 125.888a87.182 87.182 0 0 0 39.381-33.763l-71.565-92.52a.76.568 0 0 0-.664-.28z"
+              transform="matrix(.02428 0 0 .02428 -1030.156 172.97)"
+            />
+            <path
+              d="M11249.461-1883.696c-12.74 0-23.067 10.327-23.067 23.067 0 4.333 1.22 8.58 3.522 12.251l19.232-24.863c.138-.18.486-.18.624 0l19.233 24.864a23.068 23.068 0 0 0 3.523-12.252c0-12.74-10.327-23.067-23.067-23.067z"
+              transform="translate(-1030.156 172.97) scale(.09176)"
+            />
+          </svg>
+        </a>
+      </Link>
       <Link href="https://matrix.to/#/#librewolf:matrix.org" passHref>
         <a
           className="text-current p-2 cursor-pointer mobile-hidden"
