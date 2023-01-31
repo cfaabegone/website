@@ -5,36 +5,38 @@ export default function SelectOs() {
   return (
     <>
       <div className="grid">
-        {repositories.map((repo) => (
-          <Link href={`/installation/${repo.slug}`} passHref key={repo.name}>
-            <a className="card focus:ring">
-              <div className={repo.logoDark ? "hide-dark" : ""}>
-                <img
-                  src={repo.logo}
-                  width={60}
-                  height={60}
-                  alt={`${repo.name} Logo`}
-                />
-              </div>
-              {repo.logoDark && (
-                <div className={"hide-light"}>
+        {repositories
+          .filter((repo) => !repo.hidden)
+          .map((repo) => (
+            <Link href={`/installation/${repo.slug}`} passHref key={repo.name}>
+              <a className="card focus:ring">
+                <div className={repo.logoDark ? "hide-dark" : ""}>
                   <img
-                    src={repo.logoDark}
+                    src={repo.logo}
                     width={60}
                     height={60}
                     alt={`${repo.name} Logo`}
                   />
                 </div>
-              )}
-              <h3 style={{ ...(repo.subtitle ? { fontSize: "1.4em" } : {}) }}>
-                {repo.name}
-              </h3>
-              {repo.subtitle && (
-                <span className="subtitle text-gray">{repo.subtitle}</span>
-              )}
-            </a>
-          </Link>
-        ))}
+                {repo.logoDark && (
+                  <div className={"hide-light"}>
+                    <img
+                      src={repo.logoDark}
+                      width={60}
+                      height={60}
+                      alt={`${repo.name} Logo`}
+                    />
+                  </div>
+                )}
+                <h3 style={{ ...(repo.subtitle ? { fontSize: "1.4em" } : {}) }}>
+                  {repo.name}
+                </h3>
+                {repo.subtitle && (
+                  <span className="subtitle text-gray">{repo.subtitle}</span>
+                )}
+              </a>
+            </Link>
+          ))}
       </div>
       <style jsx>{`
         .grid {

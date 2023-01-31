@@ -8,6 +8,7 @@ const repositories: {
     name: string;
     url: string;
   };
+  hidden?: boolean;
 }[] = [
   {
     name: "Windows",
@@ -78,7 +79,8 @@ const repositories: {
     name: "OpenBSD",
     subtitle: "(deprecated)",
     slug: "openbsd",
-    logo: "/icons/openbsd.png"
+    logo: "/icons/openbsd.png",
+    hidden: true
   }
 ];
 

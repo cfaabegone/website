@@ -47,11 +47,13 @@ export default function InstallationHeader() {
             <option value="" disabled hidden>
               ...
             </option>
-            {repositories.map((repo) => (
-              <option value={repo.slug} key={repo.slug}>
-                {repo.name}
-              </option>
-            ))}
+            {repositories
+              .filter((repo) => !repo.hidden || repo.slug === os)
+              .map((repo) => (
+                <option value={repo.slug} key={repo.slug}>
+                  {repo.name}
+                </option>
+              ))}
           </select>
         </div>
       </h1>

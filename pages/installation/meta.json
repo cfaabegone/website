@@ -6,7 +6,7 @@
   "fedora": "Fedora",
   "linux": "Other Linux",
   "macos": "macOS",
-  "openbsd": "OpenBSD",
+  "openbsd": { "type": "nav", "title": "OpenBSD", "hidden": true },
   "index": {
     "type": "nav",
     "hidden": true
