@@ -31,7 +31,11 @@ const repositories: {
     name: "Debian based",
     subtitle: "(Debian, Ubuntu, Mint, etc.)",
     slug: "debian",
-    logo: "/icons/debian.svg"
+    logo: "/icons/debian.svg",
+    repository: {
+      name: "Bsys5 Repository",
+      url: "https://gitlab.com/librewolf-community/browser/bsys5"
+    }
   },
   {
     name: "Gentoo",
@@ -45,7 +49,11 @@ const repositories: {
   {
     name: "Fedora",
     slug: "fedora",
-    logo: "/icons/fedora.svg"
+    logo: "/icons/fedora.svg",
+    repository: {
+      name: "Bsys5 Repository",
+      url: "https://gitlab.com/librewolf-community/browser/bsys5"
+    }
   },
   {
     name: "Other Linux",
