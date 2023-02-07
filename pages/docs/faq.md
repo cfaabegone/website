@@ -16,7 +16,7 @@ be relevant:
 
 # Index
 
-_(no hyperlinks yet, copy Q and paste into page search (ctrl-f))_
+_(Jump to the answers using the sidebar on the right)_
 
 **Security and Privacy**
 
