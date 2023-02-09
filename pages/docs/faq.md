@@ -67,6 +67,7 @@ _(Jump to the answers using the sidebar on the right)_
   with Flatpak?
 - I get the APT error "Certificate verification failed"
 - I installed LibreWolf and KeePassXC using Flatpak and it does not work
+- What are the Linux options for ARM64, or aarch64 architectures?
 
 **macOS specific questions**
 
@@ -572,6 +573,27 @@ As you may have noticed when installing both LibreWolf and KeePassXC via
 Flatpak, they do not work together out of the box. We suggest reading
 [this guide](https://gitlab.com/TomaszDrozdz/librewolf-firefox-keepassxc-flatpak)
 to fix this issue!
+
+### What are the Linux options for ARM64, or aarch64 architectures?
+
+In Gitlab, we've got a label for all arm64 stuff, because the tickets are dispersed over 
+various repositories: [search repo's for aarch64 tickets](https://gitlab.com/groups/librewolf-community/-/issues/?sort=updated_desc&state=opened&label_name%5B%5D=aarch64&first_page_size=100).
+
+If you submit a ticket, please also label it with `aarch64`, so everybody can find it.
+
+We've got tickets for: 
+[Flatpak](https://gitlab.com/librewolf-community/browser/flatpak/-/issues),
+[AppImage](https://gitlab.com/librewolf-community/browser/appimage/-/issues). Please note that these are not arm-specific.
+
+There are release pages:
+[Flatpak](https://gitlab.com/librewolf-community/browser/flatpak/-/releases),
+[AppImage](https://gitlab.com/librewolf-community/browser/appimage/-/releases),
+**[Linux](https://gitlab.com/librewolf-community/browser/flatpak/-/releases)**.
+
+The last one is in bold. That's the _raw tarball version_, a good version to try
+in most situations (uncommon distro's etc), just extract the tarball and
+run librewolf from the commandline. See if it works, maybe a few dependencies 
+might need to be installed.
 
 ## macOS specific questions:
 
