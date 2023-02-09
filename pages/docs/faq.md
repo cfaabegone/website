@@ -591,7 +591,7 @@ Please note that these are not arm-specific.
 There are release pages:
 [Flatpak](https://gitlab.com/librewolf-community/browser/flatpak/-/releases),
 [AppImage](https://gitlab.com/librewolf-community/browser/appimage/-/releases),
-**[Linux](https://gitlab.com/librewolf-community/browser/flatpak/-/releases)**.
+**[Linux](https://gitlab.com/librewolf-community/browser/linux/-/releases)**.
 
 The last one is in bold. That's the _raw tarball version_, a good version to try
 in most situations (uncommon distro's etc), just extract the tarball and run
