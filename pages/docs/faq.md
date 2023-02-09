@@ -78,6 +78,10 @@ _(Jump to the answers using the sidebar on the right)_
 - Why is LibreWolf marked as broken?
 - How do I get native messaging to work?
 
+**Windows specific questions**
+
+- I have Kasperky antivirus. Why does my New Tab page not work?
+
 **General questions**
 
 - Why don't you accept donations?
@@ -633,6 +637,16 @@ ln -s ~/Library/Application\ Support/Mozilla/NativeMessagingHosts ~/Library/Appl
 This is necessary to get
 [KeePassXC-Browser](https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/)
 extension to work.
+
+## Windows specific questions
+
+### I have Kasperky antivirus. Why does my New Tab page not work?
+
+This is a known issue with Kasperky:
+[windows#313](https://gitlab.com/librewolf-community/browser/windows/-/issues/313),
+[windows#303](https://gitlab.com/librewolf-community/browser/windows/-/issues/303#note_1230777684).
+Please exclude LibreWolf from Kaspersky's monitoring, and it should go back to
+normal.
 
 ## General questions
 
