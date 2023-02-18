@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import repositories from "lib/repositories";
 import GitPlainIcon from "react-devicons/git/plain";
+import Picture from "./picture";
 
 export default function InstallationHeader() {
   const router = useRouter();
@@ -27,12 +28,12 @@ export default function InstallationHeader() {
         <div className="repo">
           {repo && (
             <>
-              <img
+              <Picture
                 src={repo.logo}
                 alt={`${repo.name} Logo`}
                 className="logo hide-dark"
               />
-              <img
+              <Picture
                 src={repo.logoDark || repo.logo}
                 alt={`${repo.name} Logo`}
                 className="logo hide-light"

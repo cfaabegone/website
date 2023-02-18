@@ -1,3 +1,5 @@
+import Picture from "./picture";
+
 export default function Features({
   features
 }: {
@@ -12,7 +14,7 @@ export default function Features({
       <div className="grid">
         {features.map((feature) => (
           <div className="card" key={feature.title}>
-            <img src={feature.icon} alt={`Icon ${feature.title}`} />
+            <Picture src={feature.icon} alt={`Icon ${feature.title}`} />
             <h5>{feature.title}</h5>
             <p dangerouslySetInnerHTML={{ __html: feature.text }} />
           </div>
@@ -44,7 +46,7 @@ export default function Features({
           }
         }
 
-        .card img {
+        .card :global(img) {
           width: 80px;
           height: 80px;
         }

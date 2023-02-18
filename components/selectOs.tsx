@@ -1,5 +1,6 @@
 import Link from "next/link";
 import repositories from "lib/repositories";
+import Picture from "./picture";
 
 export default function SelectOs() {
   return (
@@ -11,7 +12,7 @@ export default function SelectOs() {
             <Link href={`/installation/${repo.slug}`} passHref key={repo.name}>
               <a className="card focus:ring">
                 <div className={repo.logoDark ? "hide-dark" : ""}>
-                  <img
+                  <Picture
                     src={repo.logo}
                     width={60}
                     height={60}
@@ -20,7 +21,7 @@ export default function SelectOs() {
                 </div>
                 {repo.logoDark && (
                   <div className={"hide-light"}>
-                    <img
+                    <Picture
                       src={repo.logoDark}
                       width={60}
                       height={60}

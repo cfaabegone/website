@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Picture from "./picture";
+
 export default function Contributors({
   contributors
 }: {
@@ -19,7 +21,7 @@ export default function Contributors({
           href={contributor.link}
           key={contributor.tag}
         >
-          <img src={contributor.avatar} alt={`Avatar ${contributor.tag}`} />{" "}
+          <Picture src={contributor.avatar} alt={`Avatar ${contributor.tag}`} />{" "}
           <div className="name">{contributor.name || contributor.tag}</div>
           {contributor.name && (
             <div className="tag text-gray">{contributor.tag}</div>
@@ -69,7 +71,7 @@ export default function Contributors({
           color: inherit;
         }
 
-        .contributor img {
+        .contributor :global(img) {
           border-radius: 50%;
           width: 80px;
           height: 80px;

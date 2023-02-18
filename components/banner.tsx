@@ -1,5 +1,6 @@
 import Button from "./button";
 import Head from "next/head";
+import Picture from "./picture";
 
 export default function Banner() {
   return (
@@ -9,14 +10,10 @@ export default function Banner() {
       </Head>
       <div className="screenshot">
         <div className="hide-light">
-          <img src="/screenshot-dark.webp" alt="Screeenshot" />
+          <Picture src="/screenshot-dark.png" alt="Screeenshot" />
         </div>
         <div className="hide-dark">
-          <img
-            src="/screenshot-light.webp"
-            className="hide-dark"
-            alt="Screeenshot"
-          />
+          <Picture src="/screenshot-light.png" alt="Screeenshot" />
         </div>
       </div>
       <div className="inner">
