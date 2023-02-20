@@ -34,15 +34,15 @@ export function getGitlabDownloadProp(
               ...(doesntEndWith ? { doesntEndWith } : {})
             }
           };
-          async function fetchSha256(url: string) {
-            const response = await fetch(url).catch(() => {});
-            if (!response || !response.ok) return;
-            download.sha256 = (await response.text()).split(" ")[0];
-          }
-          await Promise.all([
-            fetchSha256(`${download.url}.sha256`),
-            fetchSha256(`${download.url}.sha256sum`)
-          ]);
+          // async function fetchSha256(url: string) {
+          //   const response = await fetch(url).catch(() => {});
+          //   if (!response || !response.ok) return;
+          //   download.sha256 = (await response.text()).split(" ")[0];
+          // }
+          // await Promise.all([
+          //   fetchSha256(`${download.url}.sha256`),
+          //   fetchSha256(`${download.url}.sha256sum`)
+          // ]);
           return download;
         })
   };
