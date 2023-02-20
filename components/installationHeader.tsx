@@ -31,12 +31,12 @@ export default function InstallationHeader() {
               <Picture
                 src={repo.logo}
                 alt={`${repo.name} Logo`}
-                className="logo hide-dark"
+                className="hide-dark"
               />
               <Picture
                 src={repo.logoDark || repo.logo}
                 alt={`${repo.name} Logo`}
-                className="logo hide-light"
+                className="hide-light"
               />
             </>
           )}
@@ -101,7 +101,7 @@ export default function InstallationHeader() {
           transform: translateY(4px);
         }
 
-        .logo {
+        .repo :global(img) {
           width: 1em;
           height: 1em;
           display: inline;
