@@ -4,12 +4,14 @@ import Link from "next/link";
 export default function Button({
   children,
   primary = false,
+  dark = false,
   href,
   big,
   margin = 10
 }: {
   children: ReactNode;
   primary?: boolean;
+  dark?: boolean;
   href: string;
   big?: boolean;
   margin?: number;
@@ -19,8 +21,8 @@ export default function Button({
       <Link href={href} passHref>
         <a
           className={`button text-gray focus:ring ${primary ? "primary" : ""} ${
-            big ? "big" : ""
-          }`}
+            dark ? "dark" : ""
+          } ${big ? "big" : ""}`}
         >
           {children}
         </a>
@@ -35,6 +37,16 @@ export default function Button({
           border: 1px solid rgb(226, 232, 240);
           transition: background-color 0.2s ease, transform 0.2s ease;
           display: inline-block;
+        }
+
+        .button > :global(p) {
+          display: inline;
+        }
+
+        .button > :global(svg) {
+          display: inline;
+          margin-right: 10px;
+          transform: translateY(-2px) scale(1.3);
         }
 
         .button.big {
@@ -62,6 +74,16 @@ export default function Button({
 
         .button.primary:hover {
           background-color: var(--primary-alt);
+        }
+
+        .button.dark {
+          background-color: black;
+          color: white;
+          border: none;
+        }
+
+        .button.dark:hover {
+          background-color: #404040;
         }
       `}</style>
     </>

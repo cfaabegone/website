@@ -9,6 +9,7 @@ import {
   GitlabDownloadButton,
   getGitlabDownloadProp
 } from "components/gitlabDownloadButton";
+import Button from "components/button";
 
 export const getStaticProps = getStaticDownloadButtonProps([
   getGitlabDownloadProp("winDownloadSetup", "13852981", "setup.exe"),
@@ -37,6 +38,28 @@ installation at system level is not possible, or for just testing some aspect of
 LibreWolf. You can dowload it here:
 
 <GitlabDownloadButton id="winDownloadPortable" />
+
+## Microsoft Store
+
+We are currently testing distribution on Windows via the Microsoft Store. This
+has the main advantage that updates are provided automatically. You can read
+more about the ongoing process in
+[this issue](https://gitlab.com/librewolf-community/browser/windows/-/issues/108)
+and download LibreWolf from the Microsoft Store here:
+
+<Button
+  dark
+  href="https://apps.microsoft.com/store/detail/librewolf/9NVN9SZ8KFD7"
+  margin={25}
+>
+  <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.556 0H0v8.56h8.556z" fill="#f25022" />
+    <path d="M18 0H9.444v8.56H18z" fill="#7fba00" />
+    <path d="M8.556 9.44H0V18h8.556z" fill="#00a4ef" />
+    <path d="M18 9.44H9.444V18H18z" fill="#ffb900" />
+  </svg>
+  Get it from Microsoft
+</Button>
 
 ## Package Managers
 
