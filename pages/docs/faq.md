@@ -2,7 +2,7 @@
 
 This FAQ documents version 6.8 of the settings. Make sure to always upgrade to
 the latest version of the browser. If your question is not answered here, you
-can try to get answers in our [Gitter](https://gitter.im/librewolf-community) /
+can try to get answers in our
 [Matrix](https://matrix.to/#/#librewolf:matrix.org) room, or on
 [r/LibreWolf](https://www.reddit.com/r/LibreWolf/) and
 [c/LibreWolf](https://lemmy.ml/c/librewolf).
