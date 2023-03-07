@@ -607,7 +607,7 @@ you can either build from source following the
 [build guide](https://gitlab.com/librewolf-community/browser/macos/-/blob/master/build_guide.md),
 install using a disk image from the
 [releases](https://gitlab.com/librewolf-community/browser/macos/-/releases) or
-install using HomeBrew.
+install using Homebrew.
 
 ### How do I build LibreWolf on macOS?
 
@@ -617,7 +617,7 @@ You can build from source following the
 ### How do I update LibreWolf on macOS?
 
 To update the browser on macOS you need to grab the latest .app and drag it into
-your `Applications` directory, or if you installed using HomeBrew you can do it
+your `Applications` directory, or if you installed using Homebrew you can do it
 as you would for every other cask.
 
 ### Is LibreWolf available via Homebrew?
