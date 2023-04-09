@@ -109,7 +109,7 @@ Yes, but they aren't in any way privacy invading and they were carefully
 evaluated. Specifically they are needed to fetch and update the blocking lists
 used by
 [uBO](https://github.com/gorhill/uBlock/wiki/Can-you-trust-uBlock-Origin%3F),
-[Tracking Protection](#what-is-mozilla-tracking-protection) and certificate
+[Tracking Protection](#what-is-enhanced-tracking-protection) and certificate
 revocation, which we considered more important than disabling all outgoing
 connections, especially ones that are harmless. LibreWolf also makes an
 occasional connection to check wether you have received push notifications from
@@ -159,7 +159,7 @@ scripts.
 FPI is not enabled by default as we use dFPI, and the two do not work well
 together. dFPI is a newer implementation and it causes less breakage, plus it is
 included by default when
-[using Tracking Protection](#what-is-mozilla-tracking-protection) in strict
+[using Tracking Protection](#what-is-enhanced-tracking-protection) in strict
 mode.
 
 Please also notice that dFPI makes containers and containers extensions
