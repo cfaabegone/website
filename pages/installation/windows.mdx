@@ -12,8 +12,16 @@ import {
 import Button from "components/button";
 
 export const getStaticProps = getStaticDownloadButtonProps([
-  getGitlabDownloadProp("winDownloadSetup", "13852981", "setup.exe"),
-  getGitlabDownloadProp("winDownloadPortable", "13852981", "portable.zip")
+  getGitlabDownloadProp(
+    "winDownloadSetup",
+    "44042130",
+    "windows-x86_64-setup.exe"
+  ),
+  getGitlabDownloadProp(
+    "winDownloadPortable",
+    "44042130",
+    "windows-x86_64-portable.zip"
+  )
 ]);
 
 <InstallationHeader />
