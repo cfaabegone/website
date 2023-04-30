@@ -593,6 +593,23 @@ This is a known issue with Kasperky:
 Please exclude LibreWolf from Kaspersky's monitoring, and it should go back to
 normal.
 
+### How do I set up Bitwarden's biometric authentication?
+
+This is an ongoing issue where we can only help you with a workarround:
+
+Open the Registry Editor and go to
+`Computer\HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\` and/or
+`HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts`. Create a new key
+called `com.8bit.bitwarden` in the left-side panel of RegEdit (or your registry
+editor of choice, fellow home users). Set the Default `REG_SZ` to contain the
+path to Bitwarden Firefox's Native Messaging Manifest:
+`...\browsers\firefox.json`. The path may look something like this, your mileage
+will wary:
+`C:\Users\milk\scoop\apps\bitwarden\current\bitwarden-appdata\browsers\firefox.json`.
+
+Once you've done that, you **should** be able to setup the Native Messaging
+bridge between LibreWolf and Bitwarden for biometric authentication.
+
 ## General questions
 
 ### Why don't you accept donations?
