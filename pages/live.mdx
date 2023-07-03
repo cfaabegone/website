@@ -1,0 +1,26 @@
+import { useSSG } from "nextra/ssg";
+import { useEffect, useState } from "react";
+export const getStaticProps = () => {
+  return {
+    props: {
+      ssg: {
+        date: Date.now()
+      }
+    },
+    revalidate: 3600
+  };
+};
+
+# Test Page
+
+export function Timer() {
+  const { date } = useSSG();
+  const [diff, setDiff] = useState(0);
+
+useEffect(() => { setInterval(() => { setDiff((Date.now() - date) / 1000); },
+10); }, []);
+
+return <span>{diff.toFixed(2)}</span>; }
+
+This page was rendered on the server on {new Date(useSSG().date).toString()},
+which was <Timer /> seconds ago.
