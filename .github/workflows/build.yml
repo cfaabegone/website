@@ -24,12 +24,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
       - name: Install & Build
         run: |
           yarn
           yarn export
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "out/"
   deploy:
     environment:
       name: github-pages
